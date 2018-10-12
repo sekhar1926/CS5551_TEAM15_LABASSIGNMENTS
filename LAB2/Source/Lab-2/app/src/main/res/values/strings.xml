@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab-2</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="min_password">Minimum 6 characters</string>
+    <string name="camera">Take Picture</string>
+    <string name="get_vision">Get text</string>
+    <string name="text">text</string>
+</resources>
