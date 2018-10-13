@@ -1,0 +1,68 @@
+<html ng-app="myhome">
+<head>
+  <script src="js/angular.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"/>-->
+  <script src="js/home.js"></script>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/adonespitogo/angular-base64-upload/master/src/angular-base64-upload.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body bgcolor="white">
+<ion-pane>
+
+  <ion-header-bar>
+    <h2 align="center">Home page</h2>
+  </ion-header-bar>
+
+  <ion-content>
+    <div ng-controller="home">
+    
+    
+   
+<div  class="container">
+	<div><h2>{{pro}}</h2></div>
+	<div class="row ">
+		<h3> search</h3>
+
+		<form >
+
+			<div class="col-sm-6 input-group"><input type="text"  class="form-control"
+																   ng-model="word" placeholder="Enter input " id="result">
+				
+
+				<div class="input-group-btn">
+					<button class="btn btn-primary" type="button" ng-click="getdata();">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+
+
+
+
+		</form>
+	</div>
+
+	<br/>
+	<br/>
+	<div  class="well" ng-repeat="item in titlelist">
+		<a href="{{item.link}}" target="_blank"><b>{{item.title}} </b>  </a> <br/>
+
+
+	</div>
+    
+    <div>
+        <input type="button" class="btn btn-info" onclick="location.href = 'ocrplugin.html';" value="Text Recognition Api" align="right"/>
+    <input type="button" class="btn btn-danger" onclick="location.href = 'index.html';" value="Logout" align="right"/><br/>
+    </div>
+</div>
+
+    </div>
+  </ion-content>
+</ion-pane>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link rel="manifest" href="manifest.json">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+      
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB6HjwfAUah_83r6OLOOM1x4Ums1KWCyuM",
+    authDomain: "lab-2-62011.firebaseapp.com",
+    databaseURL: "https://lab-2-62011.firebaseio.com",
+    projectId: "lab-2-62011",
+    storageBucket: "lab-2-62011.appspot.com",
+    messagingSenderId: "179432719853"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body ng-app="login" ng-controller="login">
+<ion-pane>
+
+        <ion-content>
+<br/><br/>
+<div align="center"><h1>Ionic Lab2</h1></div>
+            
+            <div class="container">
+  <h2>Login</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" placeholder="Enter email address" required ng-model="username" name="link" id="url" value="E-mail Address" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" required ng-model="password" placeholder="Enter password" name="link" id="url2" value="Password">
+    </div>
+    
+    <input type="button" class="btn btn-default" value="Login" ng-model="login" ng-click="login(username, password)"/><br/><br/>
+                <input type="button" class="btn btn-primary"  value="Register" ng-click="register(username, password)"/>
+  </form>
+</div>
+
+          
+                  
+                
+              
+
+            
+
+        </ion-content>
+
+
+</ion-pane>
+
+  </body>
+</html>
